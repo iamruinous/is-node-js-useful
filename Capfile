@@ -4,7 +4,7 @@ load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 # Edit these
 set :application, "isnodejsuseful"
 set :node_file, "useful.js"
-set :host, "instaderek.com"
+set :host, "isnodejsuseful.com"
 set :repository, "git://github.com/iamruinous/is-node-js-useful.git"
 set :branch, "master"
 set :deploy_to, "/home/deploy/apps/#{application}"
