@@ -1,0 +1,38 @@
+body {
+  text-align: center; 
+  padding-top: 200px;
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  text-align: left;
+  margin-left: 160px;
+}
+
+h1 {
+  font-size: 50pt;
+}
+
+input.big {
+  font-size: 2em;
+  width: 650px;
+  border: 2px solid black;
+}
+
+input.go {
+  font-size: 1.4em;
+  border: 0;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.huge {
+  font-size: 120pt;
+}
+
+.footer {
+  margin-top: 120px;
+  font-size: 10pt;
+}
