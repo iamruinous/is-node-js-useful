@@ -26,7 +26,6 @@ app.get('/', function(req, res){
 
 app.post ('/check.:format?', function(req, res){
     res.render('no');
-  }
 });
 
 app.listen(3000);
