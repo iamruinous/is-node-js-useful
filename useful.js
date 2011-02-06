@@ -24,8 +24,29 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
-app.post ('/check', function(req, res){
-   res.render('no'); 
+app.post ('/check.:format?', function(req, res){
+  format = req.params.format
+  if (!format) {
+    if (req.accepts('json'))
+      format = 'json'
+    if (req.accepts('xml'))
+      format = 'xml'
+  }
+  
+  switch (format) {
+    case 'json':
+      res.send({"answer": "NO"});
+      break;
+      
+    case 'xml':
+      res.send("<?xml version=\"1.0\" encoding=\"utf-8\" ?><answer>NO</answer>")
+      break;
+      
+    case 'html':
+    default:
+      res.render('no'); 
+      break;
+  }
 });
 
 app.listen(3000);
