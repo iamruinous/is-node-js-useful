@@ -25,7 +25,30 @@ app.get('/', function(req, res){
 });
 
 app.post ('/check.:format?', function(req, res){
-    res.render('no');
+  format = req.params.format
+  if (!format) {
+    if (req.accepts('json'))
+      format = 'json'
+    if (req.accepts('xml'))
+      format = 'xml'
+    if (req.accepts('html'))
+      format = 'html'
+  }
+  
+  switch (format) {
+    case 'json':
+      res.send({"answer": "NO"});
+      break;
+      
+    case 'xml':
+      res.send("<?xml version=\"1.0\" encoding=\"utf-8\" ?><answer>NO</answer>")
+      break;
+      
+    case 'html':
+    default:
+      res.render('no'); 
+      break;
+  }
 });
 
 app.listen(3000);
