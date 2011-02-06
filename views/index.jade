@@ -3,6 +3,11 @@ h1 Is node.js useful?
 form(method="post", action="/check")
   p
     input(type="text", name="description", placeholder="brief project description").big
+    a(href="#", id="find-out") find out!
+  script
+    | $('#find-out').click(function(){
+    |   $('form').submit()
+    | });
     
 div.footer
   &copy; 2010 Jade Meskill &mdash;
