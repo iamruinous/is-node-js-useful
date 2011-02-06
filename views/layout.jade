@@ -2,7 +2,11 @@
 html(lang="en")
   head
     script(src: "/jquery.js", type: "text/javascript")
+    script(src: "/jquery-placeholder.js", type: "text/javascript")
     link(href: "/style.css", media: "screen", rel: "stylesheet", type: "text/css")
     title Is node.js useful?
   body
     div!= body
+  | <script>
+  | $('input[placeholder],textarea[placeholder]').placeholder();
+  | </script>
